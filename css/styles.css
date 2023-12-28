@@ -14,12 +14,27 @@
    }
 
    .container {
-       width: 1158px;
-       padding-left: 15px;
-       padding-right: 15px;
-       margin-right: auto;
-       margin-left: auto;
+    max-width: 320 px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+    outline: 2px solid maroon;
    }
+
+@media screen and (min-width: 768px) {
+    .container {
+     max-width: 768px;
+    
+}}
+
+@media screen and (min-width: 1158px) {
+    .container {
+     max-width: 1158px;
+     padding-left: 15px;
+     padding-right: 15px;
+}}
 
    body {
        color: var(--slat-color);
@@ -239,8 +254,8 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
 }}
 
 @media screen and (min-width: 768px) {
-.hero {
-background-image: url(../images/tablet/hero/Dark-bg-min.jpg)
+    .hero {
+        background-image: url(../images/tablet/hero/Dark-bg-min.jpg)
 }}
 
 /*===================== For desktop ===================== */
@@ -253,8 +268,8 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 }}
 
 @media screen and (min-width: 1158px) {
-.hero {
-background-image: url(../images/desktop/hero/people-office\ 1-min.jpg)
+    .hero {
+        background-image: url(../images/desktop/hero/people-office\ 1-min.jpg)
 }}
 
 /* ======================================================= */
