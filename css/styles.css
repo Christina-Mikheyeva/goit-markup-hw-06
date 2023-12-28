@@ -221,8 +221,10 @@
        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
    }
 
-@media screen and (min-resolution: 192dpi) {
-.hero {background-image: url(../images/compressjpeg_desktop/hero/people-office\ 1@2x-min.jpg);
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+.hero {background-image: url(../images/desktop/hero/people-office\ 1@2x-min.jpg);
     }}
 
    .hero-title {
