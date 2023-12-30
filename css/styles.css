@@ -14,7 +14,7 @@
    }
 
    .container {
-    max-width: 320 px;
+    max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
     margin-right: auto;
@@ -24,8 +24,10 @@
    }
 
 @media screen and (min-width: 768px) {
-    .container {
+    .container {   
      max-width: 768px;
+
+     outline: 2px solid maroon;
     
 }}
 
@@ -34,8 +36,10 @@
      max-width: 1158px;
      padding-left: 15px;
      padding-right: 15px;
-}}
 
+     outline: 2px solid maroon;
+}}
+ 
    body {
        color: var(--slat-color);
        background-color: #FFFFFF;
@@ -375,12 +379,15 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
        font-size: 16px;
    }
 
-   .section-list {
-       display: flex;
-       flex-wrap: wrap;
-       gap: 24px;
-
-   }
+@media screen and (min-width: 768px) {
+    .section-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 64px;
+}}
 
    .section-list-items {
        border-radius: 0px 0px 4px 4px;
@@ -389,9 +396,15 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
    }
 
-   .item {
+@media screen and (min-width: 1158px) {
+    .item {
+        flex-basis: calc((100% - 24px) / 2);
+}}
+
+@media screen and (min-width: 1158px) {
+    .item {
        flex-basis: calc((100% - 3*24px) / 4);
-   }
+}}
 
    /* ====================================== SECTION 2 (OUR TEAM)=========================================== */
 
@@ -413,6 +426,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
    .card {
        padding-top: 32px;
        padding-bottom: 32px;
+       margin-bottom: 32px;
    }
 
    .section-topic,
