@@ -325,9 +325,16 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
    /* ====================================== SECTION 1 (OUR VALUE)============================================*/
 
    .section {
-       padding-top: 120px;
-       padding-bottom: 120px;
+       padding-top: 96px;
+       padding-bottom: 96px;
    }
+
+@media screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+}}
+   
 
    .section-title {
        margin-bottom: 72px;
@@ -367,17 +374,32 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
    }
 
    .section-list .section-topic {
-       color: var(--navy-blue-color);
-       font-size: 20px;
-       font-weight: 500;
-       line-height: 1.2;
-       letter-spacing: 0.02em;
-   }
+        color: var(--navy-blue-color);
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;;
+        text-transform: capitalize;
+     }
 
-   .section-list,
+
+@media screen and (min-width: 1158px) {
+    .section-list .section-topic {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+}}
+
    .section-text {
-       font-size: 16px;
-   }
+        font-weight: 500;
+    }
+
+
+@media screen and (min-width: 1158px) {
+    .section-text{
+        font-weight: 400;
+}}
 
    .section-list {
         display: flex;
