@@ -375,7 +375,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 
    .section-list .section-topic {
         color: var(--navy-blue-color);
-        text-align: center;
         font-size: 36px;
         font-weight: 700;
         line-height: 1.11;
@@ -501,13 +500,20 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 
 
    .portfolio>.item {
-       flex-basis: calc((100% - 2*24px) / 3);
-       
        transition-property: box-shadow;
        transition-duration: 250ms;
        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    }
 
+@media screen and (min-width: 768px) {
+    .portfolio>.item {
+        flex-basis: calc((100% - 24px) / 2);
+}}
+
+@media screen and (min-width: 1158px) {
+    .portfolio>.item {
+        flex-basis: calc((100% - 2*24px) / 3);
+}}
    .portfolio {
        row-gap: 48px;
    }
