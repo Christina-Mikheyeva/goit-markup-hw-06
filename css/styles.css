@@ -245,7 +245,8 @@
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
 screen and (min-resolution: 2dppx) and (max-width: 767px),
 screen and (min-device-pixel-ratio: 2) and (max-width: 767px)  {
-    .hero {background-image: url(../images/mobil/hero/Dark-bg@2x-min.jpg);
+    .hero {background-image:linear-gradient(var(--grey),
+        var(--grey)), url(../images/mobil/hero/Dark-bg@2x-min.jpg);
 }}
 
 /*===================== For tablet===================== */
@@ -254,12 +255,14 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px)  {
 screen and (min-resolution: 2dppx) and (min-width: 768px),
 screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
     .hero {
-        background-image: url(../images/tablet/hero/Dark-bg@2x-min.jpg);
+        background-image:linear-gradient(var(--grey),
+        var(--grey)), url(../images/tablet/hero/Dark-bg@2x-min.jpg);
 }}
 
 @media screen and (min-width: 768px) {
     .hero {
-        background-image: url(../images/tablet/hero/Dark-bg-min.jpg)
+        background-image:linear-gradient(var(--grey),
+        var(--grey)), url(../images/tablet/hero/Dark-bg-min.jpg)
 }}
 
 /*===================== For desktop ===================== */
@@ -268,12 +271,14 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
 screen and (min-resolution: 2dppx) and (min-width: 1158px),
 screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
     .hero {
-        background-image: url(../images/desktop/hero/people-office\ 1@2x-min.jpg);
+        background-image:linear-gradient(var(--grey),
+        var(--grey)), url(../images/desktop/hero/people-office\ 1@2x-min.jpg);
 }}
 
 @media screen and (min-width: 1158px) {
     .hero {
-        background-image: url(../images/desktop/hero/people-office\ 1-min.jpg)
+        background-image:linear-gradient(var(--grey),
+        var(--grey)), url(../images/desktop/hero/people-office\ 1-min.jpg)
 }}
 
 /* ======================================================= */
@@ -281,15 +286,30 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
    .hero-title {
        margin-right: auto;
        margin-left: auto;
-       margin-bottom: 48px;
-       max-width: 496px;
+       margin-bottom: 72px;
+       max-width: 288px;
 
        color: white;
-       font-size: 56px;
+       font-size: 36px;
        font-weight: 700;
-       line-height: 1.07;
-       letter-spacing: 0.02em;
+       line-height: 1.11;
    }
+
+@media screen and (min-width: 768px) {
+    .hero-title {
+        margin-bottom: 48px;
+        max-width: 496px;
+
+        font-size: 56px;
+        line-height: 1.07;
+}}
+
+@media screen and (min-width: 1158px) {
+    .hero-title {
+        margin-bottom: 48px;
+        
+        line-height: 1.12;
+} }
 
      /*-------- BUTTON *----------*/
 
