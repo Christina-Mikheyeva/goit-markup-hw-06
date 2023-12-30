@@ -379,13 +379,17 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
        font-size: 16px;
    }
 
-@media screen and (min-width: 768px) {
-    .section-list {
+   .section-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        row-gap: 72px;
         column-gap: 24px;
+    }
+
+@media screen and (min-width: 768px) {
+    .section-list {
         row-gap: 64px;
 }}
 
@@ -426,7 +430,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
    .card {
        padding-top: 32px;
        padding-bottom: 32px;
-       margin-bottom: 32px;
    }
 
    .section-topic,
