@@ -512,6 +512,17 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
        row-gap: 48px;
    }
 
+@media screen and (min-width: 768px) and
+(max-width: 1157.08px) {
+    .portfolio {
+        row-gap: 72px;
+}}
+
+/* @media screen and (min-width: 1158px) {
+    .portfolio {
+        row-gap: 48px;
+}} */
+
    .border {
        border-right: 1px solid var(--cornflower);
        border-bottom: 1px solid var(--cornflower);
