@@ -121,22 +121,28 @@
    }
 
    .header .logo {
-       margin-right: 149px;
        padding-top: 17.5px;
        padding-bottom: 17.5px;
    }
 
-   .mobile-svg {
-        fill: #2F2F37;
-   }
-
+   /* < -- Button in mobile menu --> */
    .mobile-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        border: none;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: transparent;
+       border: none;
     }
+    
+    .mobile-svg {
+         fill: #2F2F37;
+    }
+
+@media screen and (min-width: 768px) {
+        .mobile-btn {
+            display: none;
+}}
+    /* -------------------------------*/
 
 @media screen and (min-width: 768px) {
        .header .logo {
@@ -164,6 +170,8 @@
    .nav {
        display: flex;
        align-items: center;
+       justify-content: space-between;
+       flex-grow: 1;
    }
 
    .nav-list {
@@ -221,6 +229,13 @@
        color: var(--slat-color);
        font-style: normal;
    }
+
+@media screen and (min-width: 768px) {
+    .address {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.04em;
+}}
 
    .address .link {
        transition-property: color;
