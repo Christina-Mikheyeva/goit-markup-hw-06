@@ -18,15 +18,11 @@
         padding-right: 16px;
         margin-right: auto;
         margin-left: auto;
-
-        outline: 2px solid maroon;
     }
 
 @media screen and (min-width: 768px) {
     .container {   
         max-width: 768px;
-
-        outline: 2px solid maroon;
 }}  
 
 @media screen and (min-width: 1158px) {
@@ -34,8 +30,6 @@
      max-width: 1158px;
      padding-left: 15px;
      padding-right: 15px;
-
-     outline: 2px solid maroon;
 }}
  
    body {
@@ -231,7 +225,7 @@
        font-style: normal;
    }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .address {
         font-size: 12px;
         line-height: 1.16;
@@ -250,20 +244,30 @@
    }
 
    .address-list {
-       display: flex;
-       gap: 40px;
+        display: none;
    }
 
-@media screen and (max-width: 767.98px) {
-       .address-list {
-           display: none;
+@media screen and (min-width: 768px) {
+    .address-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
 }}
 
-   .link {
-       display: block;
-       padding-top: 24px;
-       padding-bottom: 24px;
-   }
+@media screen and (min-width: 1158px) {
+    .address-list {
+        gap: 40px;
+}}
+
+@media screen and (min-width: 1158px) {
+    .link {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+}}
 
    /* ====================================== SECTION HERO ================================================ */
 
@@ -652,16 +656,27 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
  
    .footer > .container {
        display: flex;
+       flex-wrap: wrap;
        align-items: baseline;
    }
+
+@media screen and (max-width: 767.98px) {
+    .footer >.container {
+
+}}
 
    .position-socialtext{
     margin-right: auto;
    }
 
-   .position-socialicons{
+   .position-socialicons {
     margin-right: auto;
    }
+
+@media screen and (max-width: 767.98px) {
+    .position-socialicons {
+        margin-bottom: 72px;
+}}
 
    .text-studio,
    .footer-text {
@@ -694,7 +709,16 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 
    .footer-text {
        width: 264px;
-   }
+    }
+
+@media screen and (max-width: 767.98px) {
+    .footer-text {
+        margin-bottom: 72px; 
+}}
+
+.portfolio {
+    row-gap: 48px;
+}
 
    /* ====================================== SUBSCRIBE ======================================================== */
 
@@ -723,6 +747,11 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         border-radius: 4px;
         color: #ffffff;
     }
+
+@media screen and (max-width: 767.98px) {
+    .subscribe-input {
+        max-width: 100%;
+}}
 
     .subscribe-input::placeholder {
         color: #ffffff;
@@ -887,7 +916,7 @@ border: none;
 }
 
 .wrapper-textarea {
-margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .textarea {
@@ -917,9 +946,9 @@ margin-bottom: 16px;
 }
 
 .input-policy:checked + .policy-label .policy-checkbox-square {
-background-color: var(--ocean);
-border: none;
-fill: var(--cloud-color);
+    background-color: var(--ocean);
+    border: none;
+    fill: var(--cloud-color);
 }
 
 .wrapper-policy {
