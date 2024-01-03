@@ -74,6 +74,10 @@
        display: block;
    }
 
+   svg {
+    flex-shrink: 0;
+   }
+
    button {
        cursor: pointer;
    }
@@ -418,7 +422,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
        line-height: 1.11;
        text-transform: capitalize;
        text-align: center;
-       letter-spacing: 0.02em;
+       /* letter-spacing: 0.02em;  from body delete this*/
    }
 
    .visually-hidden {
@@ -661,7 +665,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
     .footer > .container {
-        padding: 0 108px;
+        padding: 0 164px 0 108px;
 }}
 
 @media screen and (min-width: 768px) {
@@ -703,6 +707,10 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 if you fall to do tablet
 }} */
 
+    .subscribe-wrapper {
+        width: 100%;
+        max-width: 453px;
+    }
 
    .text-studio,
    .footer-text {
@@ -756,15 +764,15 @@ if you fall to do tablet
         color: #ffffff;
     }
 
-@media screen and (min-width: 1158px) {
-    .subscribe-form {
-        display: flex;
-        gap: 24px;
-}}
+    @media screen and (min-width: 768px) {
+        .subscribe-form {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+    }}
     
     .subscribe-input {
         width: 100%;
-        margin-bottom: 16px;
         height: 40px;
         border: 1px solid #ffffff;
         background-color: transparent;
@@ -777,11 +785,15 @@ if you fall to do tablet
         color: #ffffff;
     }
     
+@media screen and (max-width: 767.98px) {
+    .subscribe-input {
+        margin-bottom: 16px;;
+}}
     
-    @media screen and (min-width: 768px) {
-        .subscribe-input {
-            width: 264px;
-    }}
+@media screen and (min-width: 768px) {
+    .subscribe-input {
+        width: 264px;
+}}
 
     .subscribe-input::placeholder {
         color: #ffffff;
@@ -789,8 +801,8 @@ if you fall to do tablet
 
     .subscribe-btn {
         min-width: 165px;
-        height: 40px;
-        display: flex;
+        height: 40px; 
+        display: inline-flex;
         justify-content: center;
         align-items: center;
     }
