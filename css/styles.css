@@ -936,6 +936,8 @@ if you fall to do tablet
 
 .wrapper-input {
     position: relative;
+    /* for stretch  */
+    display: flex; 
 }
 
 .input-field {
@@ -949,6 +951,8 @@ if you fall to do tablet
     background-color: transparent;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    /* for stretch  */
+    flex-grow: 1;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -981,6 +985,9 @@ if you fall to do tablet
 
 .wrapper-textarea {
     margin-bottom: 16px;
+    /* for stretch  */
+    display: flex;
+    flex-direction: column;
 }
 
 .textarea {
