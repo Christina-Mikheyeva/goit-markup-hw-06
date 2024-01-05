@@ -72,6 +72,7 @@ p {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 svg {
@@ -282,13 +283,12 @@ input {
 
 
 .hero {
-    text-align: center;
-    padding-top: 188px;
-    padding-right: 0;
-    padding-bottom: 188px;
-    padding-left: 0;
-    min-height: 600px;
-    max-width: 1440px;
+    padding-top: 72px;
+    padding-right: 16px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    max-width: 320px;
+    min-height: 432px;
     margin-right: auto;
     margin-left: auto;
 
@@ -301,6 +301,26 @@ input {
     background-size: cover;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-top: 112px;
+        padding-right: 136px;
+        padding-bottom: 0px;
+        padding-left: 136px;
+        max-width: 768px;
+        min-height: 436px;
+}}
+
+@media screen and (min-width: 1158px) {
+    .hero {
+        padding-top: 188px;
+        padding-right: 0;
+        padding-bottom: 188px;
+        padding-left: 0;
+        max-width: 1440px;
+        min-height: 600px;
+}}
 
 /*===================== For mobile ===================== */
 
@@ -346,10 +366,9 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 /* ======================================================= */
 
 .hero-title {
-    margin-right: auto;
-    margin-left: auto;
+    text-align: center;
     margin-bottom: 72px;
-    max-width: 288px;
+    width: 288px;
 
     color: white;
     font-size: 36px;
@@ -360,7 +379,7 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 @media screen and (min-width: 768px) {
     .hero-title {
         margin-bottom: 48px;
-        max-width: 496px;
+        width: 496px;
 
         font-size: 56px;
         line-height: 1.07;
@@ -368,8 +387,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 
 @media screen and (min-width: 1158px) {
     .hero-title {
-        margin-bottom: 48px;
-        
         line-height: 1.12;
 }}
 
@@ -429,6 +446,8 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 }
 
 .visually-hidden {
+    overflow: hidden;
+
     position: absolute;
     width: 1px;
     height: 1px;
@@ -438,10 +457,11 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 
 .decorations {
+    visibility: hidden;
+
     display: flex;
     height: 112px;
     border: 1px solid var(--light-slate);
@@ -453,31 +473,26 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
     background-color: var(--cloud-color);
 }
 
-.section-list .section-topic {
+@media screen and (min-width: 1158px) {
+    .decorations {
+        visibility: visible;
+}}
+
+.section-topic {
     color: var(--navy-blue-color);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;;
-    text-transform: capitalize;
-}
-
-@media screen and (min-width: 1158px) {
-    .section-list .section-topic {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-}}
-
-.section-text {
+    font-size: 20px;
     font-weight: 500;
+    line-height: 1.2; /* 24px/20px */
 }
 
-
-@media screen and (min-width: 1158px) {
-    .section-text{
-        font-weight: 400;
+@media screen and (max-width: 1157.98px) {
+    .font-weight {
+        font-weight: 500;
 }}
+
+.font-size {
+    font-size: 36px;
+}
 
 .section-list {
     display: flex;
@@ -603,7 +618,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         row-gap: 72px;
 }}
 
-
 .border {
     border-right: 1px solid var(--cornflower);
     border-bottom: 1px solid var(--cornflower);
@@ -727,10 +741,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         margin-bottom: 72px; 
         text-align: left;
 }}
-
-.portfolio {
-    row-gap: 48px;
-}
 
 /* ====================================== SUBSCRIBE ======================================================== */
 
